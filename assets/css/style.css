@@ -1,0 +1,11 @@
+/* style.css */
+
+body {
+    background-image: url("../images/beach-calm-clouds-457882.jpg");
+    background-size: 100%;
+}
+
+.container {
+    background-color: rgba(189, 205, 249, 0.7);
+    text-align: center;
+}
