@@ -9,7 +9,7 @@ var answers;
 var guessedLetters;
 var remainingGuesses;
 var letters = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
-var words = ["beach", "boardwalk", "starfish", "swimming", "sunscreen", "waves", "lounging", "sunshine", "happy"];
+var words = ["beach", "boardwalk", "starfish", "swimming", "sunscreen", "waves", "lounging", "sunshine", "happy", "sand", "surfing", "shells", "fish"];
 
 //initiate game
 function startGame() {
@@ -61,9 +61,11 @@ function onKeyPressed(event) {
     } else {
         for (var j = 0; j < word.length; j++) {
             if (word[j] === guess) {
-                answers[j] = guess;
-                lettersRemainingCount--;
                 correctLetter = true;
+                if (answers[j] !== guess) {
+                    answers[j] = guess;
+                    lettersRemainingCount--;
+                }
             }
         }
     }
@@ -79,13 +81,17 @@ function onKeyPressed(event) {
 
     if (lettersRemainingCount <= 0) {
         numberWins++;
-        document.getElementById("log").textContent = "Contrats! You guessed the word " + word + "!";
+        var logDiv = document.getElementById("log");
+        logDiv.textContent = "Contrats! You guessed the word " + word + "!";
+        logDiv.style.color = "green";
         startGame();
     }
 
     if (remainingGuesses <= 0) {
         numberLosses++;
-        document.getElementById("log").textContent = "Good Game (but you loose...). Try again!";
+        var logDiv = document.getElementById("log");
+        logDiv.textContent = "Good Game (but you loose...). Try again!";
+        logDiv.style.color = "red";
         startGame();
     }
 }
