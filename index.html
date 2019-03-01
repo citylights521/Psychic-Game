@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Hangman</title>
+</head>
+
+<body onload="startGame()">
+    <script src="assets/javascript/game.js"></script>
+    <h1>Hangman Game-Vacay Addition</h1>
+    <h2>Let's Play!</h2>
+
+
+    <!-- directions ****edit this section to make it play from any key vs click here -->
+    <h1>Press any letter to start.</h1>
+    <p id="log"></p>
+
+    <div id="display">
+    </div>
+
+    <!--shows player their current game status-->
+    <h3>Guessed Letters This Round:<p id="guess"></p>
+    </h3>
+
+    <h3>Remaining Guesses This Round:<p id="turnsLeft"></p>
+    </h3>
+
+
+    <!--shows player their scoreboard-->
+    <h3>Wins:<p id="wins"></p>
+    </h3>
+
+    <h3>Losses:<p id="losses"></p>
+    </h3>
+
+
+</body>
+
+</html>
