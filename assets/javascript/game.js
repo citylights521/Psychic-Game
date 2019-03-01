@@ -51,6 +51,8 @@ function onKeyPressed(event) {
         return;
     }
 
+    document.getElementById("log").textContent = null;
+
     //guess log for debugging 
     // document.getElementById("log").textContent = guess;
 

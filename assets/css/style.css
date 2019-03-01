@@ -8,12 +8,28 @@ body {
 .container {
     background-color: rgba(189, 205, 249, 0.7);
     text-align: center;
+    margin-top: 6%;
+    padding: 20px;
 }
 
 #display {
     font-size: 50px;
+    color: rgb(18, 106, 156);
 }
 
 #log {
     font-size: 45px; 
+}
+
+h1 {
+    font-size: 60px;
+    color: rgb(18, 106, 156);
+    font-family: 'Permanent Marker', cursive;
+}
+
+h2 {
+    color: rgb(18, 106, 156);
+}
+h3 {
+    color: rgb(78, 67, 182);
 }
