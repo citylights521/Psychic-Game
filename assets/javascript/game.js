@@ -28,6 +28,7 @@ function startGame() {
     //guessed array
     guessedLetters = [];
     document.getElementById("guess").textContent = guessedLetters;
+ 
 
     //6 guesses allowed per game/round
     remainingGuesses = 6;
@@ -39,7 +40,7 @@ function startGame() {
     //player pushes keys to start guessing
     document.onkeyup = onKeyPressed;
 
-    //letters guessed this game/round outside of the correct letters in the current word
+    //letters guessed this round outside of the correct letters in the current word
     lettersRemainingCount = word.length;
 }
 
@@ -60,6 +61,7 @@ function onKeyPressed(event) {
 
     if (guess.length !== 1) {
         console.log("Nice try-single letters only!");
+        
     } else {
         for (var j = 0; j < word.length; j++) {
             if (word[j] === guess) {
@@ -84,7 +86,7 @@ function onKeyPressed(event) {
     if (lettersRemainingCount <= 0) {
         numberWins++;
         var logDiv = document.getElementById("log");
-        logDiv.textContent = "Contrats! You guessed the word " + word + "!";
+        logDiv.textContent = "Congrats! You guessed the word " + word + "!";
         logDiv.style.color = "green";
         startGame();
     }
