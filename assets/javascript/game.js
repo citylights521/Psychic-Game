@@ -94,7 +94,7 @@ function onKeyPressed(event) {
     if (remainingGuesses <= 0) {
         numberLosses++;
         var logDiv = document.getElementById("log");
-        logDiv.textContent = "Good Game (but you loose...). Try again!";
+        logDiv.textContent = "Good Game (but you lose...). Try again!";
         logDiv.style.color = "red";
         startGame();
     }
